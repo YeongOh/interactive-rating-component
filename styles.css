@@ -1,0 +1,146 @@
+:root {
+  --color-primary: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-grey: hsl(217, 12%, 63%);
+  --color-medium-grey: hsl(216, 12%, 54%);
+  --color-medium-blue: hsl(213, 18%, 24%);
+  --color-dark-blue: hsl(213, 19%, 18%);
+  --color-very-dark-blue: hsl(216, 12%, 8%);
+  --font-size-base: 0.9375rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size-base);
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--color-very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: var(--color-white);
+  font-weight: 400;
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+p {
+  color: var(--color-light-grey);
+  line-height: 1.5;
+}
+
+.card {
+  width: 25rem;
+  background-color: var(--color-dark-blue);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  min-height: 21.5rem;
+}
+
+.star {
+  background-color: var(--color-medium-blue);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.rating-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light-grey);
+  background-color: var(--color-medium-blue);
+  padding: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 1.5rem 0;
+  border: transparent;
+}
+
+.rating-btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-light-grey);
+  transition: all 0.3s ease-in-out;
+}
+
+.rating-btn.selected {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.rating-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  text-align: center;
+  color: lightcoral;
+  margin-bottom: 1rem;
+}
+
+.btn-submit {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  width: 100%;
+  letter-spacing: 0.15rem;
+}
+
+.btn-submit:hover {
+  background-color: hsl(25, 81%, 41%);
+}
+
+.btn-submit:active {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* Thank you*/
+
+.card-thankyou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-select {
+  background-color: var(--color-medium-blue);
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  color: var(--color-primary);
+}
+
+.card-appreciation {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    padding: 1.5rem;
+    width: 21rem;
+  }
+  body {
+    font-size: 0.88rem;
+  }
+}
